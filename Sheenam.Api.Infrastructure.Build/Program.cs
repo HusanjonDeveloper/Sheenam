@@ -10,7 +10,7 @@ using ADotNet.Models.Pipelines.GithubPipelines.DotNets.Tasks.SetupDotNetTaskV1s;
 
 var githubPipeline = new GithubPipeline
 {
-    Name = "Sheenam Build Pipline",
+    Name = "Sheenam Build Pipeline",
 
     OnEvents = new Events
     {
@@ -40,7 +40,7 @@ var githubPipeline = new GithubPipeline
 
                 new SetupDotNetTaskV1
                 {
-                    Name = "Seting Up .NET",
+                    Name = "Setting Up .NET",
                     TargetDotNetVersion = new TargetDotNetVersion
                     {
                         DotNetVersion = "7.0.200"
@@ -49,7 +49,7 @@ var githubPipeline = new GithubPipeline
 
                 new RestoreTask
                 {
-                    Name = "Restarting Nutget Packages"
+                    Name = "Restarting Nugget Packages"
                 },
 
                 new DotNetBuildTask

@@ -1,4 +1,4 @@
-name: Sheenam Build Pipline
+name: Sheenam Build Pipeline
 on:
   push:
     branches:
@@ -12,12 +12,12 @@ jobs:
     steps:
     - name: Checking Out Code
       uses: actions/checkout@v2
-    - name: Seting Up .NET
+    - name: Setting Up .NET
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 7.0.200
         include-prerelease: false
-    - name: Restarting Nutget Packages
+    - name: Restarting Nugget Packages
       run: dotnet restore
     - name: Building Project
       run: dotnet build --no-restore
